@@ -12,8 +12,8 @@ spec:
       containers:
         - resources:
             requests:
-              cpu: 0.15
-          image: eu.gcr.io/net4machines/fluentd-kube2es:7
+              cpu: 0
+          image: eu.gcr.io/net4machines/fluentd-kube2es:15
           name: fluentd-kube2es
           volumeMounts:
             - name: docker
