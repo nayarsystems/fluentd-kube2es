@@ -20,6 +20,8 @@ spec:
               mountPath: /var/lib/docker
             - name: log
               mountPath: /var/log
+            - name: config
+              mountPath: /fluentd/etc
       volumes:
         - name: log
           hostPath:
@@ -27,3 +29,8 @@ spec:
         - name: docker
           hostPath:
               path: /var/lib/docker
+        - name: config
+          configMap:
+            name: fluentd-kube2es-config
+
+
